@@ -7,14 +7,23 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^9.0.0"
+    "inquirer": "^8.2.4"
   },
   "devDependencies": {
     "jest": "^28.1.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Halima-Ikbal/Team-Profile-Generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Halima-Ikbal/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/Halima-Ikbal/Team-Profile-Generator#readme",
+  "keywords": []
 }
