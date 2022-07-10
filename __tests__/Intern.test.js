@@ -8,7 +8,7 @@ const Intern = require("../lib/Intern");
 
 // intern object
 test("Can set school via constructor", () => {
-  const intern = new Intern("Charlie", 45883, "charlie@example.com", 'UTSA');
+  const intern = new Intern("Alpha", 45881, "Alpha@example.com", 'UTSA');
   expect(intern.school).toEqual(expect.any(String));
 });
 
@@ -16,12 +16,12 @@ test("Can set school via constructor", () => {
 
 test("Can get school via getSchool()", () => {
   
-  const intern = new Intern("Charlie", 45883, "charlie@example.com", 'UTSA');
+  const intern = new Intern("Alpha", 45881, "Alpha@example.com", 'UTSA');
   expect(intern.getSchool()).toEqual(expect.stringContaining(intern.school.toString()));
 });
 // getRole() Overridden to return intern
 test("getRole() should return \"Intern\"", () => {
-  const intern = new Intern("Charlie", 45883, "charlie@example.com", "UTSA");
+  const intern = new Intern("Alpha", 45881, "Alpha@example.com", "UTSA");
   expect(intern.getRole()).toEqual('Intern');
 });
 
