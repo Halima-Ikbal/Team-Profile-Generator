@@ -7,7 +7,7 @@ AS A manager
 https://github.com/Halima-Ikbal/Team-Profile-Generator 
 
 # Screenshot of Portfolio
-![portfolio image](assets/image/2022-05-14%20(1).png) 
+![portfolio image](src/image/2022-07-10%20(1).png) 
 
 # video link:
 https://drive.google.com/file/d/1JQGGB4O7QIsK8YkNgBEycL36EPRcVFpy/view 
