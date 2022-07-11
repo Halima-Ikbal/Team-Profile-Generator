@@ -51,7 +51,7 @@ const Manager = require("./lib/Manager");
 //     <h5 class="card-title">${name}</h5>
 //     <p class="card-text">ID:${name}</p>
 //     <p class="card-text">Email: <a href="mailto:${name}" class="text-white">Intern</a></p>
-//     <p class="card-text">School: <a  class="text-white">2</a></p>
+//     <p class="card-text">School: ${name} </p>
 //   </div>
 // </div>
 // </main>
