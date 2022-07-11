@@ -8,7 +8,59 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 
-const generateHTML = require('./src/generateHTML');
+//const generateHTML = require('./src/generateHTML');
+
+// const generateHTML = (name, github) => {
+//   return `
+//   <!DOCTYPE html> 
+//   <html lang="en"> 
+//   <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+//     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+//     <title>Team Profile</title>
+//   </head>
+
+//   <body>
+//   <header class="row justify-content-center text-white bg-primary mb-3">
+//     <h1>Team Profile</h1>
+//   </header>
+//   <main class="row justify-content-around">
+//   <div class="card text-white bg-secondary col-sm-6 col-md-4 col-lg-2 m-3">
+//     <h4 class="card-header">Manager</h4>
+//     <div class="card-body">
+//       <h5 class="card-title">${name}</h5>
+//       <p class="card-text">ID:${name}</p>
+//       <p class="card-text">Email: <a href="mailto:${name}" class="text-white">Manager</a></p>  
+//       <p class="card-text">Office Number: <a class="text-white">4</a></p>
+//     </div>
+//   </div>
+//   <div class="card text-white bg-secondary col-sm-6 col-md-4 col-lg-2 m-3">
+//   <h4 class="card-header">Engineer</h4>
+//   <div class="card-body">
+//     <h5 class="card-title">${name}</h5>
+//     <p class="card-text">ID:${name}</p>
+//     <p class="card-text">Email: <a href="mailto:${name}" class="text-white">Engineer</a></p>
+//     <p class="card-text">GitHub: <a href="https://www.github.com/${name}" target="_blank" class="text-white">https://www.github.com/${name}</a></p>
+//   </div>
+//   </div>
+// <div class="card text-white bg-secondary col-sm-6 col-md-4 col-lg-2 m-3">
+//   <h4 class="card-header">Intern</h4>
+//   <div class="card-body">
+//     <h5 class="card-title">${name}</h5>
+//     <p class="card-text">ID:${name}</p>
+//     <p class="card-text">Email: <a href="mailto:${name}" class="text-white">Intern</a></p>
+//     <p class="card-text">School: <a  class="text-white">2</a></p>
+//   </div>
+// </div>
+// </main>
+
+    
+//   </body>
+//   </html>
+//   `;
+// };
 
 // employees array
 const employees =[];
@@ -198,7 +250,7 @@ const addEmployee = () => {
 
 //function to generate HTML page file using file system
 const writeFile = data => {
-  fs.writeFile('./generateHTML.html', data, err => {
+  fs.writeFile('./src/index.html', data, err => {
     // if there is an error
     if (err) {
       console.log(err);
@@ -215,24 +267,24 @@ const writeFile = data => {
 
 // exports
 
-// addManager()
-// // run addEmployee fxn to add employee(s) to array
-// .then(addEmployee)
-// // then add the whole employees array to the generateHTML
-// .then(employees => {
-//   return generateHTML(employees);
-// })
-// // write an HTML file with the generated employees array
-// .then(pageHTML => {
-//   return writeFile(pageHTML);
-// })
-// // if error then state error in command-line
-// .catch(err => {
-//   console.log(err);
-// });
+addManager()
+// run addEmployee fxn to add employee(s) to array
+.then(addEmployee)
+// then add the whole employees array to the generateHTML
+.then(employees => {
+  return generateHTML(employees);
+})
+// write an HTML file with the generated employees array
+.then(pageHTML => {
+  return writeFile(pageHTML);
+})
+// if error then state error in command-line
+.catch(err => {
+  console.log(err);
+});
 
 
 // // var greeting= 'hello'
 // // console.log(greeting);
-// init();
-module.exports 
+
+//module.exports= employees;
